@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<head>
+<title>Inventory</title>
+<meta charset="UTF-8">	
+<!--ITD 210 Assignment2 - Car Dealership Website
+	Author: Andrea Dace, Group5ITD210FA18 
+	Due Date: September 10, 2018
+	Filename: luxuryclass.html
+-->
+<link rel = "stylesheet" type = "text/css" href = "carstyle.css" />
+<script type="text/javascript" src="carscript.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style></style>
+</head>
+<body>
+<!--Murphy Logo and Header Images -->
+<header id="everyPage">
+	<div id="logoDiv">
+		<img id="CarDealerLogo" src="DaceMurphyAutoLogo.png" alt="Murphy Auto Toyota Lexus Logo.">
+	</div>
+
+	<div id="lgeHeader">
+		<img id="headerPic" src="RxSuvInt.jpg" alt="Image of Interior of 2018 Lexus RXL SUV. Image credit: Andrea Dace">
+	</div>
+	
+    <nav class="horizontal">
+        <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Sedan</a></li>
+        <li><a href="#">SUV</a></li>
+        <li><a href="#">Truck</a></li>
+		<li><a href="luxuryclass.html">Luxury</a></li>
+		<li><a href="inventory.html">Inventory</a></li>
+         </ul>
+      </nav>
+</header>
+<br/>
+<br/>
+<br/>
+<br/>
+<h1>Try Murphy Auto's Inventory Finder</h1>	
+
+<a href= "inventory.html#allInv">No thanks, just take me to the entire inventory table.</a>
+<br />
+<br />
+<br />
+	
+<div >
+<frameset>
+	<form id="finder">
+	<h1>Inventory Finder</h1>
+		<select name="brand">
+			<option value="brandList">--MANUFACTURER--</option>
+			<option value="toyota">Toyota</option>
+			<option value="lexus">Lexus</option>
+		</select>
+		<select name="lexClass">
+			<option value="classList">--VEHICLE CLASS--</option>
+			<option value="suv">SUV</option>
+			<option value="sedan">Sedan</option>
+			<option value="truck">Truck</option>
+			<option value="luxury">Luxury</option>
+		</select>
+<!-- might use other options model, price range, seating		
+		<select name="model">
+			<option value=""></option>
+			<option value=""></option>
+			<option value=""></option>
+			<option value=""></option>
+		</select>
+-->
+<h2>You may also limit your selection to colors available in our current inventory:</h2>
+	<form>
+		<input type="color" name="greenModel" value="#68332A" disabled>Red/Brown
+		<input type="color" name="silverModel" value="#363670" disabled>Blue/Black
+		<input type="color" name="caviarModel" value="#C8C3DD" disabled>White/Silver
+<br />
+<br />		
+	<button>Submit</button>
+	</form>
+
+<br />
+<br />
+<br />
+	</form>
+
+<!--The following area will display the inventory-->
+	<div id="inventoryDisplay">
+	<h1>Our Current Inventory Meeting Your Specifications:</h1>
+		<div id="inv1">
+	<img class="invPic" src = "LCCoupe.jpg" alt="Image of 2018 Lexus LCCoupe. Image credit: Andrea Dace">
+<!--Some text describing the vehicle and an internal link to that page-->	
+	<p class="price">Prices starting at $92,000</p>	
+	<a href="luxuryclass.html#luxCoupe">For more information</a>
+		</div>
+
+	</div>
+</frameset>
+</div>
+<br />
+<br />
+<br />
+
+<br />
+<br />
+<br />
+
+<section>
+<table id="allInv" >
+<th colspan="13" style="background-color: grey;"><h1>Table listing the inventory with specifications</h1></th>
+	<tr>
+		<th>Make (Toyota/Lexus)</th>
+		<th>Class (Sedan, SUV, Truck)</th>	<th>Model</th>	
+		<th>Starting Price: </th>
+		<th>Weight </th>			
+		<th>Engine/HP</th>	
+		<th>MPG  city/hwy/comb</th>	
+		<th>Seating capacity</th>
+	</tr>
+												<tr>	
+		<td>Lexis</td>	
+		<td>Sedan</td> 	
+		<td>Lexus ES 350</td>	
+		<td>$38,950</td>
+		<td>3,649 lb</td>		
+		<td>V6/268</td>	
+		<td>21/30/24</td>	
+		<td>5</td>
+	</tr>
+
+	<tr>
+		<td>Lexis</td>	
+		<td>SUV</td> 	
+		<td>Lexus RX350L</td>	
+		<td>$47,670</td>
+		<td>4,619 lb</td>		
+		<td>V8/295</td>	
+		<td>20/27/23</td>		
+		<td>7</td>
+
+	</tr>
+	
+
+
+	<tr>
+		<td>Lexis</td>	
+		<td>Coupe</td> 	
+		<td>Lexus LC 500</td>	
+		<td>$92,000</td>
+		<td>4,280 lb</td>		<td>V8/471</td>	
+		<td>16/26/19</td>	
+		<td>4</td>
+	</tr>
+	
+	<tr>
+		<td>Lexis</td>	
+		<td>Sedan</td> 	
+		<td>Lexus ES 300 hybrid</td>	
+		<td>$41,310</td>
+		<td>3,704 lb</td>		
+		<td>In-Line 4</td>	
+		<td>43/45/44</td>		
+		<td>5</td>
+
+	</tr>
+		<tr>
+		<td>Lexis</td>	
+		<td>Sedan</td> 	
+		<td>Lexus IS 300</td>	
+		<td>$38,210</td>
+		<td>3,583 lb</td>		
+		<td>Turbo In-line 4</td>	
+		<td>22/32/26</td>		
+		<td>5</td>
+
+	</tr>
+		<tr>
+		<td>Lexis</td>	
+		<td>SUV</td> 	
+		<td>Lexus NXh Sport</td>	
+		<td>$38,210</td>
+		<td>3,940 lb</td>		
+		<td>In-Line 4</td>	
+		<td>22/28/25</td>		
+		<td>5</td>
+
+	</tr>
+	
+	<tr>	
+		<td>Toyota</td>	
+		<td>Sedan</td> 	
+		<td>Corolla XLE</td>	
+		<td>$22,135</td>
+		<td>2,870 lb</td>		
+		<td>4 cylinder</td>	
+		<td>28/36/32</td>		
+		<td>5</td>
+	</tr>
+	<tr>	
+		<td>Toyota</td>	
+		<td>Sedan</td> 	
+		<td>Corolla SE</td>	
+		<td>$21,865</td>
+		<td>2,860 lb</td>		
+		<td>4 cylinder</td>	
+		<td>27/35/30</td>	
+		<td>5</td>
+	</tr>
+	<tr>	
+		<td>Toyota</td>	
+		<td>Sedan</td> 	
+		<td>Corolla XSE</td>	
+		<td>$22,880</td>
+		<td>2,885 lb</td>		
+		<td>4 cylinder</td>	
+		<td>28/35/31</td>		
+		<td>5</td>
+	</tr>
+	<tr>	
+		<td>Toyota</td>	
+		<td>SUV</td> 	
+		<td>Land Cruiser</td>	
+		<td>$84,765</td>
+		<td>5,815 lb</td>		
+		<td>V8</td>	
+		<td>13/18/15</td>		
+		<td>8</td>
+	</tr>
+	<tr>	
+		<td>Toyota</td>	
+		<td>SUV</td> 	
+		<td>RAV4 XLE</td>	
+		<td>$25,750</td>
+		<td>3,485 lb</td>		
+		<td>4 cylinder</td>	
+		<td>23/30/26</td>		
+		<td></td>
+	</tr>
+	<tr>	
+		<td>Toyota</td>	
+		<td>SUV</td> 	
+		<td>Highlander SE</td>	
+		<td>$40,290</td>
+		<td>4,310 lb</td>		
+		<td>V6</td>	
+		<td>21/27</td>		
+		<td>7</td>
+	</tr>
+									<tr>	
+		<td>Toyota</td>	
+		<td>Truck</td> 	
+		<td>2019 4-Runner</td>	
+		<td>$34,910</td>
+		<td>4,400lb</td>		
+		<td>4.0L V-6</td>	
+		<td>17/21</td>	
+		<td>5</td>
+	</tr>
+	<tr>	
+		<td>Toyota</td>	
+		<td>Truck</td> 	
+		<td>2018 Tacoma</td>	
+		<td>$25,400</td>
+		<td>5600 lb</td>		
+		<td>2.7LI-4</td>	
+		<td>20/23</td>	
+		<td>4</td>
+	</tr>
+	<tr>	
+		<td>Toyota</td>	
+		<td>Truck</td> 	
+		<td>2019 Tundra</td>	
+		<td>$31,420</td>
+		<td>5,100 lb</td>		
+		<td>4.6L V-8</td>	
+		<td>15/19</td>	
+		<td>6</td>
+	</tr>
+	</table>
+	
+<section>
+<br />
+<br />
+<br />
+
+
+</body>
+<footer >
+<p>Murphy Auto</p>
+<p>Toyota Lexus</p>
+<p>Address</p>
+<p>Telephone</p>
+<p>Website</p>
+</footer>
+
+
+</html>

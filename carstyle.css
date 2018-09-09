@@ -1,0 +1,154 @@
+/*Master format:*/
+body {
+	background-color: #FFF; color: #000;
+	font-family: Tahoma, Geneva, sans-serif;
+
+}
+
+#logoDiv{
+	background-color:#6b7c84;
+	width: 100%;
+}
+
+#CarDealerLogo{
+    left: 0;
+    top: 0;
+	max-width:300px;
+	background-color:#6b7c84;
+}
+
+#headerPic{
+    left: 0;
+    top: 0;
+    width: 100%;
+
+} 
+
+#lgeHeader{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+	margin:0px;
+
+}
+	
+nav.horizontal {
+   width: 100%;
+   margin:0px;
+}
+
+nav.horizontal li {
+   background-color: #004080;
+   display: block;
+   font-family: Tahoma, Geneva, sans-serif;
+   float: left;
+   width: 16%;
+}
+
+nav.horizontal li a {
+   color: white;
+   display: block;
+   font-size: 1em;
+   height: 50px; 
+   letter-spacing: 0.1em;   
+   line-height: 50px; 
+   text-align: center;     
+   width: 100%;
+}
+
+/* Navigation List Styles */
+nav a {
+   text-decoration: none;
+}
+
+nav.horizontal li a:link {
+	color: #fff;
+}
+nav.horizontal li a:visited{
+	color: #e5ebf2;
+}
+nav.horizontal li a:active, nav.horizontal li a:hover {
+	color: #004080;
+	background-color: #e5ebf2;
+}
+/* Footer:*/
+footer{
+	background-color: #004080;
+	color: #000;
+	padding: 5%;
+	
+}
+
+	
+/* Inventory Page format:*/
+#finder{
+	background-color: #e5ebf2;
+	margin: 0px 10%;
+}
+
+#inventoryDisplay{
+	background-color: #e5ebf2;
+	margin: 0px 10%;
+}
+
+.invPic{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+} 
+
+#allInv{
+	background-color: #e5ebf2;
+	margin: 0px 10%;
+	text-align: center;
+}
+	
+/*the following style makes the background stripes in the table*/
+
+tr:nth-child(odd) {
+	background-color: #fff;
+}
+
+th, td {
+	padding: 1rem;
+}
+
+
+
+	
+/* Luxury Page format:*/
+	
+/* Centered images and text below model image on product pages  */	
+	
+.carPic{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+} 
+
+.carBlurb{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 67%;
+	background-color:#FFF; 
+	color: #000; 
+    padding: 0px 20px;
+}
+
+/* format section where models appear*/	
+#LexusModels{
+	clear:left;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+#luxSedan, #luxSuv, #luxCoupe {
+	background-color: #ecebf2;
+	padding-bottom: 20px;
+		margin: 0px 10%;
+}
