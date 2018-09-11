@@ -1,0 +1,53 @@
+
+header {
+  width: 100%;
+  height: 50%;
+  background-color: #004080;
+  position:relative;
+
+}
+.carousel img {
+  display: block;
+  margin: auto;
+}
+
+nav {
+  display: block;
+  padding-left: 600px;
+
+}
+nav ul {
+
+}
+nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+  color: white;
+}
+nav ul li a {
+  font-size: 18px;
+  color: white;
+}
+
+
+.truckSpecs {
+  display: block;
+  background-color:#e5ebf2;
+  padding-left: 600px;
+  }
+
+div.runner {
+  margin: auto;
+  width: 60%;
+  padding-left: 300px;
+}
+div.tacoma {
+  margin: auto;
+  width: 60%;
+  padding-left: 300px;
+}
+div.tundra {
+    margin: auto;
+    width: 60%;
+    padding-left: 300px;
+}

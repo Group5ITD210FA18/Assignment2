@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Murphy Auto homepage
+    </title>
+    <link href="MurphyH&TPage.css" rel="stylesheet"/>
+  </head>
+<body>
+  <header>
+    <nav>
+           <ul>
+               <li><a href="Murphy HomePage.html">HOME</a></li>
+               <li>SEDAN</li>
+               <li>SUV</li>
+               <li><a href="Murphy TruckPage.html">TRUCK</a></li>
+               <li>LUXURY</li>
+               <li>INVENTORY</li>
+           </ul>
+         </nav>
+    </header>
+  <div class="carousel">
+  <img class="mySlides w3-animate-fading" src="images/2019ToyCorolla.jpg">
+  <img class="mySlides w3-animate-fading" src="images/2019RedLexus.jpg">
+  <img class="mySlides w3-animate-fading" src="images/2019Lexus.png">
+  <img class="mySlides w3-animate-fading" src="images/ToyTacoma.jpeg">
+</div>
+<article>
+</article>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 3000);
+}
+</script>
+
+  <script type="text/javascript">
+ </script>
+
+</body>
+  </html>
