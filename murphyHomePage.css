@@ -1,0 +1,61 @@
+html{
+	font:16px;
+}
+
+body{
+overflow-x:hidden;
+max-width:100%;
+font-family:Helvetica;
+}
+
+/*Header Section*/
+header{
+	
+}
+
+#bannerBackgroundPic{
+	height:20rem;
+}
+#murphyLogo{
+	width:25%;
+	height:auto;
+}
+
+#murphyLogo img{
+	max-width:100%;
+	height:auto;
+}
+nav{
+padding:1rem 1rem;
+background-color:#004080;
+color:white;
+}
+
+nav ul{
+ display:flex;
+ justify-content:space-around;
+}
+nav ul li a{
+	text-decoration:none;
+	color:white;
+}
+nav ul li a:hover{
+	text-decoration:underline #e5ebf2;
+	color:white;
+}
+
+/*Main Section*/
+
+
+
+/*Footer Section*/
+footer{
+	padding:2rem 2rem;
+	background-color:#004080;
+	color:white;
+}
+
+footer .contact{
+	display:flex;
+	justify-content:center;
+}
