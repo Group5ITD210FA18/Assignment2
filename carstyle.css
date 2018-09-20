@@ -2,7 +2,17 @@
 body {
 	background-color: #FFF; color: #000;
 	font-family: Tahoma, Geneva, sans-serif;
+}
 
+.customNavDiv{
+   background-color: #fff;
+   border: 0px;
+
+}
+/*not working*/
+.ui-btn-active-custom{
+	font: Tahoma, Geneva, sans-serif; 
+	font-size-adjust: 3em;
 }
 
 #logoDiv{
@@ -17,11 +27,11 @@ body {
 	background-color:#6b7c84;
 }
 
+/* obsolete 9/17/18, client elected to display carousel
 #headerPic{
     left: 0;
     top: 0;
     width: 100%;
-
 } 
 
 #lgeHeader{
@@ -29,9 +39,9 @@ body {
     margin-right: auto;
     width: 100%;
 	margin:0px;
-
 }
-	
+*/
+
 nav.horizontal {
    width: 100%;
    margin:0px;
@@ -71,19 +81,33 @@ nav.horizontal li a:active, nav.horizontal li a:hover {
 	color: #004080;
 	background-color: #e5ebf2;
 }
+
+
+
 /* Footer:*/
 footer{
 	background-color: #004080;
-	color: #000;
+	color: #fff;
 	padding: 5%;
-	
 }
 
 	
 /* Inventory Page format:*/
+#finderInfo{
+	padding:1% 10%; 
+}
+
+#finderSelector{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #e5ebf2;
+}
+
 #finder{
 	background-color: #e5ebf2;
 	margin: 0px 10%;
+	padding: 10%
 }
 
 #inventoryDisplay{
@@ -100,7 +124,7 @@ footer{
 
 #allInv{
 	background-color: #e5ebf2;
-	margin: 0px 10%;
+	margin: 0px 0%;
 	text-align: center;
 }
 	
@@ -113,7 +137,6 @@ tr:nth-child(odd) {
 th, td {
 	padding: 1rem;
 }
-
 
 
 	
@@ -144,11 +167,34 @@ th, td {
 	display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
+    width: 100%;	
 }
 
 #luxSedan, #luxSuv, #luxCoupe {
 	background-color: #ecebf2;
 	padding-bottom: 20px;
-		margin: 0px 10%;
+	margin: 0% 10%;
+}
+
+/* luxury product page table styling */
+.luxTable{
+	width:100%;
+	text-align: center;
+
+}
+
+.luxHead{
+	background-color: #e5ebf2;
+}
+
+/* jQuery styling */
+
+
+/* Assignment 3 - styling necessary for carousel on index page*/
+#carousel-example-generic{
+	clear:left;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
 }

@@ -2,30 +2,56 @@
 <head>
 <title>Inventory</title>
 <meta charset="UTF-8">	
-<!--ITD 210 Assignment2 - Car Dealership Website
+<!--ITD 210 Assignment4 - Car Dealership Website
 	Author: Andrea Dace, Group5ITD210FA18 
-	Due Date: September 10, 2018
+	Due Date: September 24, 2018
 	Filename: luxuryclass.html
 -->
 <link rel = "stylesheet" type = "text/css" href = "carstyle.css" />
 <script type="text/javascript" src="carscript.js"></script>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <link rel="stylesheet" href="themes/CarDealer.css" />
+  <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style></style>
+
 </head>
+
 <body>
-<!--Murphy Logo and Header Images -->
+<!--Murphy Logo active as Home in jQuery (maxes out at 5 items)-->
+<div data-role="header" style="overflow:hidden;">
+	<div id="logoDiv">
+		<a href="newCarouselIndex.html" data-ajax="false" class="ui-btn-active">
+		<img id="CarDealerLogo" src="DaceMurphyAutoLogo.png" alt="Murphy Auto Toyota Lexus Logo.">
+		</a>
+
+
+<!--jQuery Navbar eliminated Home-->	
+	<div class="customNavDiv" data-role="navbar" data-grid="d">
+        <ul>
+        <li><a href="#" data-ajax="false" class="ui-btn-active-custom"><p>Sedan</p><p></p></a></li>
+        <li><a href="#" data-ajax="false" class="ui-btn-active-custom"><p>SUV</p><p></p></a></li>
+        <li><a href="#" data-ajax="false" class="ui-btn-active-custom"><p>Truck</p><p></p></a></li>
+		<li><a href="luxuryclass.html" data-ajax="false" class="ui-btn-active-custom"><p>Luxury</p><p></p></a></li>
+		<li><a href="inventory.html" data-ajax="false" class="ui-btn-active-custom"><p>Inventory</p><p></p></a></li>
+        </ul>
+    </div>
+<!--end of jQ navbar -->
+	</div>   
+</div><!-- end of jQ header -->
+<!-- old HTML header 
 <header id="everyPage">
 	<div id="logoDiv">
 		<img id="CarDealerLogo" src="DaceMurphyAutoLogo.png" alt="Murphy Auto Toyota Lexus Logo.">
 	</div>
-
-	<div id="lgeHeader">
-		<img id="headerPic" src="RxSuvInt.jpg" alt="Image of Interior of 2018 Lexus RXL SUV. Image credit: Andrea Dace">
-	</div>
 	
     <nav class="horizontal">
         <ul>
-        <li><a href="#">Home</a></li>
+        <li><a href="newCarouselIndex.html">Home</a></li>
         <li><a href="#">Sedan</a></li>
         <li><a href="#">SUV</a></li>
         <li><a href="#">Truck</a></li>
@@ -34,64 +60,67 @@
          </ul>
       </nav>
 </header>
-<br/>
-<br/>
-<br/>
-<br/>
-<h1>Try Murphy Auto's Inventory Finder</h1>	
-
-<a href= "inventory.html#allInv">No thanks, just take me to the entire inventory table.</a>
-<br />
-<br />
-<br />
-	
-<div >
-<frameset>
-	<form id="finder">
-	<h1>Inventory Finder</h1>
-		<select name="brand">
-			<option value="brandList">--MANUFACTURER--</option>
-			<option value="toyota">Toyota</option>
-			<option value="lexus">Lexus</option>
-		</select>
-		<select name="lexClass">
-			<option value="classList">--VEHICLE CLASS--</option>
-			<option value="suv">SUV</option>
-			<option value="sedan">Sedan</option>
-			<option value="truck">Truck</option>
-			<option value="luxury">Luxury</option>
-		</select>
-<!-- might use other options model, price range, seating		
-		<select name="model">
-			<option value=""></option>
-			<option value=""></option>
-			<option value=""></option>
-			<option value=""></option>
-		</select>
 -->
-<h2>You may also limit your selection to colors available in our current inventory:</h2>
-	<form>
-		<input type="color" name="greenModel" value="#68332A" disabled>Red/Brown
-		<input type="color" name="silverModel" value="#363670" disabled>Blue/Black
-		<input type="color" name="caviarModel" value="#C8C3DD" disabled>White/Silver
+	<div id="finderInfo">
+		<h1>Try Murphy Auto's Inventory Finder</h1>	
+		<a href="#allInv" >No thanks, just take me to the entire inventory table.</a>
+	</div>
+<br />
+<br />
+<br />
+<div id="finderSelector">
+<form>
+<fieldset data-role="controlgroup">
+    <legend><h2>Search Current Inventory:</h2></legend>
+    <label for="select-native-5">label</label>
+    <select name="select-native-5" id="select-native-5">
+        <option value="#">--MANUFACTURER--</option>
+        <option value="#">Toyota</option>
+        <option value="#">Lexus</option>
+
+    </select>
+    <label for="select-native-6">Vehicle Class</label>
+    <select name="select-native-6" id="select-native-7">
+        <option value="#">--VEHICLE CLASS--</option>
+        <option value="#">Sedan</option>
+        <option value="#">SUV</option>
+        <option value="#">Truck</option>
+		<option value="#">Luxury</option>
+    </select>
+    <label for="select-native-7">Color</label>
+    <select name="select-native-7" id="select-native-7">
+        <option value="#">--COLOR--</option>
+        <option value="#">Silver/White</option>
+        <option value="#">Black/Blue</option>
+        <option value="#">Red</option>
+		<option value="#">Other</option>
+    </select>
+</fieldset>
+
 <br />
 <br />		
-	<button>Submit</button>
-	</form>
+	<form>
 
-<br />
-<br />
-<br />
+    <button class="ui-btn ui-btn-inline" value="Find My Car">Find My Car</button>
+
 	</form>
+</form>
+</div>
+<br />
+<br />
+<br />
+
 
 <!--The following area will display the inventory-->
 	<div id="inventoryDisplay">
-	<h1>Our Current Inventory Meeting Your Specifications:</h1>
+	<h2>Our Current Inventory Meeting Your Specifications:</h2>
 		<div id="inv1">
 	<img class="invPic" src = "LCCoupe.jpg" alt="Image of 2018 Lexus LCCoupe. Image credit: Andrea Dace">
 <!--Some text describing the vehicle and an internal link to that page-->	
 	<p class="price">Prices starting at $92,000</p>	
 	<a href="luxuryclass.html#luxCoupe">For more information</a>
+	<br />
+	<button class="ui-btn ui-btn-inline" value="resetMe">Reset</button>
 		</div>
 
 	</div>
@@ -105,139 +134,140 @@
 <br />
 <br />
 
-<section>
-<table id="allInv" >
-<th colspan="13" style="background-color: grey;"><h1>Table listing the inventory with specifications</h1></th>
+
+  <div data-role="header" id="allInv">
+    <h1>Murphy Auto</h1>
+	<h1>Current Inventory</h1>
+  </div>
+  <div role="main" class="ui-content">
+	<table data-role="table"  data-mode="reflow" class="ui-responsive ui-table ui-table-reflow">
+  
+	<thead>
 	<tr>
-		<th>Make (Toyota/Lexus)</th>
-		<th>Class (Sedan, SUV, Truck)</th>	<th>Model</th>	
+		<th>Make</th>
+		<th>Class</th>	
+		<th>Model</th>	
 		<th>Starting Price: </th>
 		<th>Weight </th>			
 		<th>Engine/HP</th>	
-		<th>MPG  city/hwy/comb</th>	
-		<th>Seating capacity</th>
+		<th>MPG  city/hwy</th>	
+		<th>Seating</th>
 	</tr>
-												<tr>	
-		<td>Lexis</td>	
+	</thead>
+	<tbody>												
+	<tr>	
+		<th>Lexis</th>	
 		<td>Sedan</td> 	
-		<td>Lexus ES 350</td>	
+		<td>ES 350</td>	
 		<td>$38,950</td>
 		<td>3,649 lb</td>		
 		<td>V6/268</td>	
-		<td>21/30/24</td>	
+		<td>21/30</td>	
 		<td>5</td>
 	</tr>
 
 	<tr>
-		<td>Lexis</td>	
+		<th>Lexis</th>	
 		<td>SUV</td> 	
-		<td>Lexus RX350L</td>	
+		<td>RX350L</td>	
 		<td>$47,670</td>
 		<td>4,619 lb</td>		
 		<td>V8/295</td>	
-		<td>20/27/23</td>		
+		<td>20/27</td>		
 		<td>7</td>
-
 	</tr>
-	
-
-
 	<tr>
-		<td>Lexis</td>	
+		<th>Lexis</th>	
 		<td>Coupe</td> 	
-		<td>Lexus LC 500</td>	
+		<td>LC 500</td>	
 		<td>$92,000</td>
-		<td>4,280 lb</td>		<td>V8/471</td>	
-		<td>16/26/19</td>	
+		<td>4,280 lb</td>		
+		<td>V8/471</td>	
+		<td>16/26</td>	
 		<td>4</td>
 	</tr>
-	
 	<tr>
-		<td>Lexis</td>	
+		<th>Lexis</th>	
 		<td>Sedan</td> 	
-		<td>Lexus ES 300 hybrid</td>	
+		<td>ES 300 hybrid</td>	
 		<td>$41,310</td>
 		<td>3,704 lb</td>		
 		<td>In-Line 4</td>	
-		<td>43/45/44</td>		
+		<td>43/45</td>		
 		<td>5</td>
-
 	</tr>
-		<tr>
-		<td>Lexis</td>	
+	<tr>
+		<th>Lexis</th>	
 		<td>Sedan</td> 	
-		<td>Lexus IS 300</td>	
+		<td>IS 300</td>	
 		<td>$38,210</td>
 		<td>3,583 lb</td>		
 		<td>Turbo In-line 4</td>	
-		<td>22/32/26</td>		
+		<td>22/32</td>		
 		<td>5</td>
-
 	</tr>
-		<tr>
-		<td>Lexis</td>	
+	<tr>
+		<th>Lexis</th>	
 		<td>SUV</td> 	
-		<td>Lexus NXh Sport</td>	
+		<td>NXh Sport</td>	
 		<td>$38,210</td>
 		<td>3,940 lb</td>		
 		<td>In-Line 4</td>	
-		<td>22/28/25</td>		
+		<td>22/28</td>		
 		<td>5</td>
-
 	</tr>
-	
 	<tr>	
-		<td>Toyota</td>	
+		<th>Toyota</th>	
 		<td>Sedan</td> 	
 		<td>Corolla XLE</td>	
 		<td>$22,135</td>
 		<td>2,870 lb</td>		
 		<td>4 cylinder</td>	
-		<td>28/36/32</td>		
+		<td>28/36</td>		
 		<td>5</td>
 	</tr>
 	<tr>	
-		<td>Toyota</td>	
+		<th>Toyota</th>	
 		<td>Sedan</td> 	
 		<td>Corolla SE</td>	
 		<td>$21,865</td>
 		<td>2,860 lb</td>		
 		<td>4 cylinder</td>	
-		<td>27/35/30</td>	
+		<td>27/35</td>	
 		<td>5</td>
 	</tr>
 	<tr>	
-		<td>Toyota</td>	
+		<th>Toyota</th>	
 		<td>Sedan</td> 	
 		<td>Corolla XSE</td>	
 		<td>$22,880</td>
 		<td>2,885 lb</td>		
 		<td>4 cylinder</td>	
-		<td>28/35/31</td>		
+		<td>28/35</td>		
 		<td>5</td>
 	</tr>
 	<tr>	
-		<td>Toyota</td>	
+		<th>Toyota</th>	
 		<td>SUV</td> 	
 		<td>Land Cruiser</td>	
 		<td>$84,765</td>
 		<td>5,815 lb</td>		
 		<td>V8</td>	
-		<td>13/18/15</td>		
+		<td>13/18</td>		
 		<td>8</td>
 	</tr>
 	<tr>	
-		<td>Toyota</td>	
+		<th>Toyota</th>	
 		<td>SUV</td> 	
 		<td>RAV4 XLE</td>	
 		<td>$25,750</td>
 		<td>3,485 lb</td>		
 		<td>4 cylinder</td>	
-		<td>23/30/26</td>		
+		<td>23/30</td>		
 		<td></td>
 	</tr>
 	<tr>	
-		<td>Toyota</td>	
+		<th>Toyota</th>	
 		<td>SUV</td> 	
 		<td>Highlander SE</td>	
 		<td>$40,290</td>
@@ -246,8 +276,8 @@
 		<td>21/27</td>		
 		<td>7</td>
 	</tr>
-									<tr>	
-		<td>Toyota</td>	
+	<tr>	
+		<th>Toyota</th>	
 		<td>Truck</td> 	
 		<td>2019 4-Runner</td>	
 		<td>$34,910</td>
@@ -257,7 +287,7 @@
 		<td>5</td>
 	</tr>
 	<tr>	
-		<td>Toyota</td>	
+		<th>Toyota</th>	
 		<td>Truck</td> 	
 		<td>2018 Tacoma</td>	
 		<td>$25,400</td>
@@ -267,7 +297,7 @@
 		<td>4</td>
 	</tr>
 	<tr>	
-		<td>Toyota</td>	
+		<th>Toyota</th>	
 		<td>Truck</td> 	
 		<td>2019 Tundra</td>	
 		<td>$31,420</td>
@@ -276,9 +306,10 @@
 		<td>15/19</td>	
 		<td>6</td>
 	</tr>
+	<tbody>	
 	</table>
-	
-<section>
+  </div>
+
 <br />
 <br />
 <br />
