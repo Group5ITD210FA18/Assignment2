@@ -1,0 +1,115 @@
+/*logo styles*/
+div.logo2 img {
+  position: absolute;
+  z-index: 11;
+  top: -145px; 
+  left: 150px;
+  background: transparent;
+  }
+   /*nav styles*/
+  nav {
+  height: 75px;
+  background: #004080;
+  position:relative;
+  z-index:10;
+  width:100%;
+  top:0px;
+
+}
+nav ul {
+  align-content: center;
+  padding-left: 500px;
+  padding-top: 25px;
+
+}
+nav ul li {
+  display: inline-block;
+  margin-left: 80px;
+  color: white;
+}
+nav ul li a {
+  font-size: 18px;
+  color: white;
+}
+  a .li:hover {
+  background-color: #e5ebf2;
+}
+/*truck page*/
+div.truckSpecs {
+  background-color:#e5ebf2;
+  padding-left: 800px;
+  }
+
+.truckSpecs2 {
+  background-color:#e5ebf2;
+  padding-left: 800px;
+  top: 100px;
+  }
+.truckSpecs3 {
+  background-color:#e5ebf2;
+  padding-left: 800px;
+  {
+
+/*truck page pic styles*/
+
+div.runner{
+  width: 60%;
+  padding-left: 800px;
+}
+div.tacoma {
+  width: 60%;
+  padding-left: 800px;
+}
+div.tundra {
+    margin: auto;
+    width: 60%;
+    padding-left: 300px;
+}
+/*carousel caption styles */
+.carousel-caption3 {
+  position: absolute;
+    top: 12%;
+    left: 38%;
+    font-size: 42px;
+    color: #e5ebf2;
+    text-shadow: -1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+.carousel-caption2 {
+  position: absolute;
+    top: 12%;
+    left: 42%;
+    font-size: 42px;
+    color: #e5ebf2;
+    text-shadow: -1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+.carousel-caption1 {
+  position: absolute;
+    top: 12%;
+    left: 42%;
+    font-size: 42px;
+    color: #e5ebf2;
+    text-shadow: -1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+  /*footer styles*/
+  div.footer {
+	height: 75px;
+	margin-top:1000px;
+	width: 100%;
+	background-color: #004080;
+	color: white;
+	text-align: center;
+	z-index: +1;
+}
+	.p1 {
+	font-size: 20px;
+	padding-top: 25px;
+	}
