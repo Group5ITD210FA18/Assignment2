@@ -1,0 +1,151 @@
+/*Author:David Leaven
+  Date:9/20/2018
+  Class:ITD 210
+*/
+
+html{
+	font:16px;
+}
+
+body{
+overflow-x:hidden;
+max-width:100%;
+font-family:Helvetica;
+}
+
+/*Header Section*/
+header{
+
+}
+
+#colorBackground{
+	height:15rem;
+	background-color:#6b7c84;
+	
+}
+
+#murphyLogo{
+	width:15rem;
+	height:12rem;
+}
+
+#murphyLogo > img{
+	max-width:100%;
+	height:auto;
+}
+nav{
+padding:1rem 1rem;
+background-color:#004080;
+color:white;
+}
+
+nav ul{
+ display:flex;
+ justify-content:space-around;
+}
+nav ul li a{
+	text-decoration:none;
+	color:white;
+}
+nav ul li a:hover{
+  text-decoration:underline #e5ebf2;
+}
+
+
+/*Main Section*/
+main{
+	
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+
+.vehicleAndText{
+	margin:2rem 1rem;
+	
+}
+.vehiclePic{
+	width:100%;
+}
+.vehiclePic img{
+	width:100%;
+	height:auto;
+}
+.vehicleText{
+	display:flex;
+	justify-content:space-between;
+	margin-top:1.5rem;
+	padding:1rem 1rem;
+	background-color:#e5ebf2;
+}
+
+ .darkText{
+ font-weight:bold;
+}
+/*Footer Section*/
+footer{
+	padding:2rem 2rem;
+	background-color:#004080;
+	color:white;
+		
+}
+footer .modify{
+ font-size:1.25rem;
+ text-decoration:underline white;
+ margin-bottom:.5rem;
+}
+
+/*Media queries*/
+/*Smartphone Styles*/
+@media only screen and (max-width:480px){
+	.vehicleText{
+		display:flex;
+		flex-direction:column;
+		align-items:flex-start;
+	}
+	
+	footer{
+		display:flex;
+		flex-direction:column;
+	}
+	
+	footer .contact{
+		margin-bottom:1rem;
+		display:flex;
+	}
+  
+}
+/*Tablet Styles*/
+@media only screen and (max-width:768px){
+	footer{
+		display:flex;
+		flex-direction:column;
+		align-items:center;
+	}
+	footer .contact{
+		display:flex;
+		flex-direction:column;
+		align-items:center;
+		margin-bottom:1rem;
+	}
+	
+}
+/*Desktop Styles*/
+@media only screen and (min-width:769px){
+	
+	footer{
+		display:flex;
+		flex-direction:row;
+		justify-content:space-around;
+	
+	}
+	
+	footer .contact{
+		display:flex;
+		flex-direction:column;
+		align-items:center;
+	}
+}
+
+
+
