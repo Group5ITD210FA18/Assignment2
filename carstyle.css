@@ -62,7 +62,8 @@ nav.horizontal li a {
    height: 50px; 
    letter-spacing: 0.1em;   
    line-height: 50px; 
-   text-align: center;     
+   text-align: center;
+	text-decoration:none;
    width: 100%;
 }
 
@@ -93,12 +94,24 @@ footer{
 
 	
 /* Inventory Page format:*/
+#select-native-5 {
+	padding-left:20%;
+	}
+
+#select-native-6 {
+	padding-left:20%;
+	}
+#select-native-7 {
+	padding-left:20%;
+	}	
+
+
 #finderInfo{
 	padding:1% 10%; 
 }
 
 #finderSelector{
-	width: 80%;
+	width: 50%;
 	margin-left: auto;
 	margin-right: auto;
 	background-color: #e5ebf2;
@@ -113,6 +126,12 @@ footer{
 #inventoryDisplay{
 	background-color: #e5ebf2;
 	margin: 0px 10%;
+}
+
+.activeDisplay{
+    display: block;
+    margin-left: 3%;
+	width: 20%;
 }
 
 .invPic{

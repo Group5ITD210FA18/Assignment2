@@ -9,14 +9,14 @@
 -->
 <link rel = "stylesheet" type = "text/css" href = "carstyle.css" />
 <script type="text/javascript" src="carscript.js"></script>
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
 
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
-  <link rel="stylesheet" href="themes/CarDealer.css" />
-  <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" type = "text/css" href="themes/CarDealer.css" />
+<link rel="stylesheet" type = "text/css" href="themes/jquery.mobile.icons.min.css" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
@@ -26,16 +26,16 @@
 <div data-role="header" style="overflow:hidden;">
 	<div id="logoDiv">
 		<a href="newCarouselIndex.html" data-ajax="false" class="ui-btn-active">
-		<img id="CarDealerLogo" src="DaceMurphyAutoLogo.png" alt="Murphy Auto Toyota Lexus Logo.">
+		<img id="CarDealerLogo" src="logo/DaceMurphyAutoLogo.png" alt="Murphy Auto Toyota Lexus Logo.">
 		</a>
 
 
 <!--jQuery Navbar eliminated Home-->	
 	<div class="customNavDiv" data-role="navbar" data-grid="d">
         <ul>
-        <li><a href="#" data-ajax="false" class="ui-btn-active-custom"><p>Sedan</p><p></p></a></li>
-        <li><a href="#" data-ajax="false" class="ui-btn-active-custom"><p>SUV</p><p></p></a></li>
-        <li><a href="#" data-ajax="false" class="ui-btn-active-custom"><p>Truck</p><p></p></a></li>
+        <li><a href="murphyAutoSedan.html" data-ajax="false" class="ui-btn-active-custom"><p>Sedan</p><p></p></a></li>
+        <li><a href="murphyAutoSUV.html" data-ajax="false" class="ui-btn-active-custom"><p>SUV</p><p></p></a></li>
+        <li><a href="Murphy Truck Page.html" data-ajax="false" class="ui-btn-active-custom"><p>Truck</p><p></p></a></li>
 		<li><a href="luxuryclass.html" data-ajax="false" class="ui-btn-active-custom"><p>Luxury</p><p></p></a></li>
 		<li><a href="inventory.html" data-ajax="false" class="ui-btn-active-custom"><p>Inventory</p><p></p></a></li>
         </ul>
@@ -63,7 +63,7 @@
 -->
 	<div id="finderInfo">
 		<h1>Try Murphy Auto's Inventory Finder</h1>	
-		<a href="#allInv" >No thanks, just take me to the entire inventory table.</a>
+		<a href="#allInv" data-ajax="false">No thanks, just take me to the entire inventory table.</a>
 	</div>
 <br />
 <br />
@@ -72,38 +72,37 @@
 <form>
 <fieldset data-role="controlgroup">
     <legend><h2>Search Current Inventory:</h2></legend>
-    <label for="select-native-5">label</label>
+    <label for="select-native-5">Manufacturer</label>
     <select name="select-native-5" id="select-native-5">
-        <option value="#">--MANUFACTURER--</option>
-        <option value="#">Toyota</option>
-        <option value="#">Lexus</option>
+        <option value="Missing manufacturer">--MANUFACTURER--</option>
+        <option value="toyota">Toyota</option>
+        <option value="lexus">Lexus</option>
 
     </select>
     <label for="select-native-6">Vehicle Class</label>
-    <select name="select-native-6" id="select-native-7">
-        <option value="#">--VEHICLE CLASS--</option>
-        <option value="#">Sedan</option>
-        <option value="#">SUV</option>
-        <option value="#">Truck</option>
-		<option value="#">Luxury</option>
+    <select name="select-native-6" id="select-native-6">
+        <option value="Missing car class">--VEHICLE CLASS--</option>
+        <option value="sedan">Sedan</option>
+        <option value="suv">SUV</option>
+        <option value="truck">Truck</option>
+		<option value="lux">Luxury</option>
     </select>
     <label for="select-native-7">Color</label>
     <select name="select-native-7" id="select-native-7">
-        <option value="#">--COLOR--</option>
-        <option value="#">Silver/White</option>
-        <option value="#">Black/Blue</option>
-        <option value="#">Red</option>
-		<option value="#">Other</option>
+        <option value="Missing color">--COLOR--</option>
+        <option value="white">White</option>
+        <option value="black">Black</option>
+        <option value="blue">Blue</option>
+        <option value="red">Red</option>
+		<option value="grey">Grey</option>
     </select>
 </fieldset>
 
 <br />
 <br />		
-	<form>
+<!--Button to find user selected specs and display the results-->
+    <button type="button" value="Find My Car" style="width: 25%" onclick="userVehicle()">Find My Car</button>
 
-    <button class="ui-btn ui-btn-inline" value="Find My Car">Find My Car</button>
-
-	</form>
 </form>
 </div>
 <br />
@@ -115,10 +114,8 @@
 	<div id="inventoryDisplay">
 	<h2>Our Current Inventory Meeting Your Specifications:</h2>
 		<div id="inv1">
-	<img class="invPic" src = "LCCoupe.jpg" alt="Image of 2018 Lexus LCCoupe. Image credit: Andrea Dace">
-<!--Some text describing the vehicle and an internal link to that page-->	
-	<p class="price">Prices starting at $92,000</p>	
-	<a href="luxuryclass.html#luxCoupe">For more information</a>
+		<p id="displayCar"></p>
+	
 	<br />
 	<button class="ui-btn ui-btn-inline" value="resetMe">Reset</button>
 		</div>
@@ -156,9 +153,9 @@
 	</thead>
 	<tbody>												
 	<tr>	
-		<th>Lexis</th>	
+		<th>Lexus</th>	
 		<td>Sedan</td> 	
-		<td>ES 350</td>	
+		<td class="grey">ES 350</td>	
 		<td>$38,950</td>
 		<td>3,649 lb</td>		
 		<td>V6/268</td>	
@@ -167,9 +164,9 @@
 	</tr>
 
 	<tr>
-		<th>Lexis</th>	
+		<th>Lexus</th>	
 		<td>SUV</td> 	
-		<td>RX350L</td>	
+		<td class="black">RX350L</td>	
 		<td>$47,670</td>
 		<td>4,619 lb</td>		
 		<td>V8/295</td>	
@@ -177,9 +174,9 @@
 		<td>7</td>
 	</tr>
 	<tr>
-		<th>Lexis</th>	
+		<th>Lexus</th>	
 		<td>Coupe</td> 	
-		<td>LC 500</td>	
+		<td class="white">LC 500</td>	
 		<td>$92,000</td>
 		<td>4,280 lb</td>		
 		<td>V8/471</td>	
@@ -187,9 +184,9 @@
 		<td>4</td>
 	</tr>
 	<tr>
-		<th>Lexis</th>	
+		<th>Lexus</th>	
 		<td>Sedan</td> 	
-		<td>ES 300 hybrid</td>	
+		<td class="none">ES 300 hybrid</td>	
 		<td>$41,310</td>
 		<td>3,704 lb</td>		
 		<td>In-Line 4</td>	
@@ -197,9 +194,9 @@
 		<td>5</td>
 	</tr>
 	<tr>
-		<th>Lexis</th>	
+		<th>Lexus</th>	
 		<td>Sedan</td> 	
-		<td>IS 300</td>	
+		<td class="none">IS 300</td>	
 		<td>$38,210</td>
 		<td>3,583 lb</td>		
 		<td>Turbo In-line 4</td>	
@@ -207,9 +204,9 @@
 		<td>5</td>
 	</tr>
 	<tr>
-		<th>Lexis</th>	
+		<th>Lexus</th>	
 		<td>SUV</td> 	
-		<td>NXh Sport</td>	
+		<td class="none">NXh Sport</td>	
 		<td>$38,210</td>
 		<td>3,940 lb</td>		
 		<td>In-Line 4</td>	
@@ -219,7 +216,7 @@
 	<tr>	
 		<th>Toyota</th>	
 		<td>Sedan</td> 	
-		<td>Corolla XLE</td>	
+		<td class="grey">Corolla XLE</td>	
 		<td>$22,135</td>
 		<td>2,870 lb</td>		
 		<td>4 cylinder</td>	
@@ -229,7 +226,7 @@
 	<tr>	
 		<th>Toyota</th>	
 		<td>Sedan</td> 	
-		<td>Corolla SE</td>	
+		<td class="grey">Corolla SE</td>	
 		<td>$21,865</td>
 		<td>2,860 lb</td>		
 		<td>4 cylinder</td>	
@@ -239,7 +236,7 @@
 	<tr>	
 		<th>Toyota</th>	
 		<td>Sedan</td> 	
-		<td>Corolla XSE</td>	
+		<td class="grey">Corolla XSE</td>	
 		<td>$22,880</td>
 		<td>2,885 lb</td>		
 		<td>4 cylinder</td>	
@@ -249,7 +246,7 @@
 	<tr>	
 		<th>Toyota</th>	
 		<td>SUV</td> 	
-		<td>Land Cruiser</td>	
+		<td class="white">Land Cruiser</td>	
 		<td>$84,765</td>
 		<td>5,815 lb</td>		
 		<td>V8</td>	
@@ -259,7 +256,7 @@
 	<tr>	
 		<th>Toyota</th>	
 		<td>SUV</td> 	
-		<td>RAV4 XLE</td>	
+		<td class="grey">RAV4 XLE</td>	
 		<td>$25,750</td>
 		<td>3,485 lb</td>		
 		<td>4 cylinder</td>	
@@ -269,7 +266,7 @@
 	<tr>	
 		<th>Toyota</th>	
 		<td>SUV</td> 	
-		<td>Highlander SE</td>	
+		<td class="red">Highlander SE</td>	
 		<td>$40,290</td>
 		<td>4,310 lb</td>		
 		<td>V6</td>	
@@ -279,7 +276,7 @@
 	<tr>	
 		<th>Toyota</th>	
 		<td>Truck</td> 	
-		<td>2019 4-Runner</td>	
+		<td class="blue">2019 4-Runner</td>	
 		<td>$34,910</td>
 		<td>4,400lb</td>		
 		<td>4.0L V-6</td>	
@@ -289,7 +286,7 @@
 	<tr>	
 		<th>Toyota</th>	
 		<td>Truck</td> 	
-		<td>2018 Tacoma</td>	
+		<td class="white">2018 Tacoma</td>	
 		<td>$25,400</td>
 		<td>5600 lb</td>		
 		<td>2.7LI-4</td>	
@@ -299,7 +296,7 @@
 	<tr>	
 		<th>Toyota</th>	
 		<td>Truck</td> 	
-		<td>2019 Tundra</td>	
+		<td class="red">2019 Tundra</td>	
 		<td>$31,420</td>
 		<td>5,100 lb</td>		
 		<td>4.6L V-8</td>	
@@ -319,9 +316,9 @@
 <footer >
 <p>Murphy Auto</p>
 <p>Toyota Lexus</p>
-<p>Address</p>
-<p>Telephone</p>
-<p>Website</p>
+<p>Virginia Beach, VA</p>
+<p>Telephone: 555-555-5555</p>
+<p>Website: www.MurphyAuto.com</p>
 </footer>
 
 
