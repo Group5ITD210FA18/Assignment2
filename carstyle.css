@@ -7,17 +7,14 @@ body {
 .customNavDiv{
    background-color: #fff;
    border: 0px;
+}
 
-}
-/*not working*/
-.ui-btn-active-custom{
-	font: Tahoma, Geneva, sans-serif; 
-	font-size-adjust: 3em;
-}
 
 #logoDiv{
 	background-color:#6b7c84;
 	width: 100%;
+	margin: 0px;
+	padding: 0px;
 }
 
 #CarDealerLogo{
@@ -42,6 +39,7 @@ body {
 }
 */
 
+/* former stying for navbar - went with jQuery nav widget
 nav.horizontal {
    width: 100%;
    margin:0px;
@@ -67,7 +65,7 @@ nav.horizontal li a {
    width: 100%;
 }
 
-/* Navigation List Styles */
+/* Navigation List Styles
 nav a {
    text-decoration: none;
 }
@@ -82,14 +80,23 @@ nav.horizontal li a:active, nav.horizontal li a:hover {
 	color: #004080;
 	background-color: #e5ebf2;
 }
+*/
 
+/* Footer: */
 
-
-/* Footer:*/
 footer{
-	background-color: #004080;
-	color: #fff;
-	padding: 5%;
+	padding:2rem 5%;
+	font-size: .8em;
+	color:white;
+	background-color:#004080;
+	height:auto;
+	width:90%;
+}
+
+.storeContact{
+	display:block;
+	column-count: 3;
+	column-width: 300px;
 }
 
 	
@@ -195,7 +202,7 @@ th, td {
 	margin: 0% 10%;
 }
 
-/* luxury product page table styling */
+/* luxury product page table styling before jQuery add
 .luxTable{
 	width:100%;
 	text-align: center;
@@ -205,7 +212,7 @@ th, td {
 .luxHead{
 	background-color: #e5ebf2;
 }
-
+*/
 /* jQuery styling */
 
 
