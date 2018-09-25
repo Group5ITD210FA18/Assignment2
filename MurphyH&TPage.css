@@ -2,10 +2,17 @@
 div.logo img {
   position: absolute;
   z-index: 11;
-  top: 1265px; 
+  top: 1113px;
   left: 150px;
   background: transparent;
 }
+div.logo2 img {
+  position: absolute;
+  z-index: 11;
+  top: 1113px;
+  left: 150px;
+  background: transparent;
+  }
 
   /*nav styles*/
   nav {
@@ -102,6 +109,35 @@ margin-left: 60px;
 z-index: -1;
 margin-top: 140px;
 }
+.tacomaInfo {
+font-size: 24px;
+height: 480px;
+width: 750px;
+position:absolute;
+float:left;
+margin-left: 500px;
+z-index: -1;
+margin-top: 100px;
+}
+.runnerInfo {
+margin-left: 930px;
+margin-top: 700px;
+font-size: 24px;
+height: 480px;
+width: 750px;
+z-index: -1;
+position: relative;
+}
+.tundraInfo {
+font-size: 24px;
+height: 480px;
+width: 750px;
+position:absolute;
+float:left;
+margin-left: 500px;
+z-index: -1;
+margin-top: 200px;
+}
 
 /*main page pic styles*/
 .pic1 {
@@ -120,6 +156,26 @@ margin-top: 700px;
 
 .pic3 {
 padding-left: 1000px;
+float: right;
+margin-right: 50px;
+margin-top: 140px;
+}
+.pic4 {
+padding-left: 1000px;
+float: right;
+margin-right: 50px;
+margin-top: 60px;
+}
+.pic5 {
+position:absolute;
+float:left;
+margin-left: 60px;
+z-index: -2;
+margin-top: 700px;
+}
+
+.pic6 {
+padding-left: 1200px;
 float: right;
 margin-right: 50px;
 margin-top: 140px;
