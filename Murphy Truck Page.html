@@ -1,51 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>
-      Murphy Truck Page
-    </title>
-    <link href="MurphyH&TPage.css" rel="stylesheet"/>
-<header>
-  <nav>
-         <ul>
-             <li><a href="Murphy Home Page.html">HOME</a></li>
-             <li>SEDAN</li>
-             <li>SUV</li>
-             <li><a href="Murphy Truck Page.html">TRUCK</a></li>
-             <li>LUXURY</li>
-             <li>INVENTORY</li>
-         </ul>
-       </nav>
-  </header>
-<div class="carousel">
-<img class="mySlides w3-animate-fading" src="images/2019ToyCorolla.jpg">
-<img class="mySlides w3-animate-fading" src="images/2019RedLexus.jpg">
-<img class="mySlides w3-animate-fading" src="images/2019Lexus.png">
-<img class="mySlides w3-animate-fading" src="images/ToyTacoma.jpeg">
-</div>
-<script>
-var myIndex = 0;
-carousel();
-
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}
-  x[myIndex-1].style.display = "block";
-  setTimeout(carousel, 3000);
-}
-</script>
-<br>
-<br>
+    <title>Murphy Truck Page</title>
+    <meta charset="utf-8">
+    <link href="Murphy Truck Page.css" rel="stylesheet"/>
+  <body>
+  <div class="logo2">
+      <img src="images/Murphy-Auto-Logo.png" alt="Murphy Logo" style="width: 460px; height: 450px;">
+  </div>
+    <div class="navigaton">
+    <nav>
+            <ul>
+               <li><a href="Murphy Main Page.html">HOME</a></li>
+               <li>SEDAN</li>
+               <li>SUV</li>
+               <li><a href="MurphyTruckPage.html">TRUCK</a></li>
+               <li>INVENTORY</li>
+           </ul>
+    </nav>
+  </div>
  <div class="runner">
-     <img src=images/2019toyota4runner.png width="800" height="400" alt="2019 Toyota 4Runner"><br>
+     <img src="images/2019toyota4runner.png" width="800" height="400" alt="2019 Toyota 4Runner"><br>
 </div>
-
-<div class="truckSpecs">
+<div class="truckSpecs" width="800" height="400">
     <p>MSRP: $34,910-$36,785</p>
      <p> Engine: 4.0LV-6</p>
      <p>MPG: 17 City / 21 Hwy</p>
@@ -53,33 +30,36 @@ function carousel() {
      <p>Transmission 5-spd-auto w/OD</p>
      <p>Power:	270 @ 5600 rpm</p>
      <p>Drivetrain:	rear-wheel</p>
-     <p>Weight: 4400lb<p>
+     <p>Weight: 4400lb</p>
 </div>
-   <div class="tacoma">
-         <img src=images/2018toyotatacoma.png width="800" height="400" alt="2019 Toyota Tacoma"><br>
-  </div>
-         <div class="truckSpecs">
-              <p>MSRP: $25,400-$41,720<p>
-              <p>Engine: 2.7 LI-4</p>
-              <p>MPG: 20 City / 23 Hwy</p>
-              <p>Seating:	4 Passengers</p>
-              <p>Transmission: 6-spd-auto w/OD</p>
-              <p>Power:	159 @ 5200 rpm</p>
-              <p>Drivetrain:	rear-wheel</p>
-              <p>Weight: 5600lb<p>
-         </div>
-  <div class="tundra">
-    <img src=images/2019toyotaTundra.jpg width="650" height="400" alt="2019 Toyota Tundra"><br>
-  </div>﻿
-        <div class="truckSpecs">
-              <p>MSRP: $31,420-$50,430<p>
-              <p>Engine: 4.6LV-8</p>
-              <p>MPG: 15 City / 19 Hwy</p>
-              <p>Seating:	6 Passengers</p>
-              <p>Transmission: 6-spd-auto w/OD</p>
-              <p>Power:	310 @ 5600 rpm</p>
-              <p>Drivetrain:	rear-wheel</p>
-              <p>Weight: 5100lb<p>
-  </div>
-</body>
+<div class="tacoma">
+         <img src="images/2018toyotatacoma.png" width="800" height="400" alt="2019 Toyota Tacoma"><br>
+</div>
+<div class="truckSpecs2">
+    <p>MSRP: $25,400-$41,720</p>
+    <p>Engine: 2.7 LI-4</p>
+    <p>MPG: 20 City / 23 Hwy</p>
+    <p>Seating:	4 Passengers</p>
+    <p>Transmission: 6-spd-auto w/OD</p>
+    <p>Power:	159 @ 5200 rpm</p>
+    <p>Drivetrain:	rear-wheel</p>
+    <p>Weight: 5600lb</p>
+</div>
+<div class="tundra">
+    <img src="images/2019toyTundraBlack.png" width="650" height="500" alt="2019 Toyota Tundra"><br>
+</div>﻿
+<div class="truckSpecs3">
+    <p>MSRP: $31,420-$50,430</p>
+    <p>Engine: 4.6LV-8</p>
+    <p>MPG: 15 City / 19 Hwy</p>
+    <p>Seating:	6 Passengers</p>
+    <p>Transmission: 6-spd-auto w/OD</p>
+    <p>Power:	310 @ 5600 rpm</p>
+    <p>Drivetrain:	rear-wheel</p>
+    <p>Weight: 5100lb</p>
+</div>
+<div class="footer">
+    <p class="p1">Phone number (555)555-5555 &nbsp &nbsp &nbsp &nbsp 504 Virginia Beach Blvd. Virginia, Beach Va 23453 &nbsp &nbsp &nbsp &nbsp Hours: 9am-9pm Monday-Saturday &nbsp 9am-6pm on Sundays</p>
+</div>
+  </body>
   </html>
