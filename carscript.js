@@ -12,11 +12,11 @@ function Vehicle (make, format, model, price, color, pic, info){
   }
 };
 
-/*the vehicle objects from the inventory table - working only for color*/
+/*the vehicle objects from the inventory table*/
 
 	var vehicle1 = new Vehicle('Lexus','Sedan','ES 350','$38,950','grey','<img src="images/ESSEDAN3.jpg" class="activeDisplay">','luxuryclass.html#luxSedan');
-	var vehicle2 = new Vehicle('Lexus','SUV','RX350L','$47,670','color','<img src="images/RXSUVfront.jpg" class="activeDisplay">','luxuryclass.html#luxSuv');
-	var vehicle3 = new Vehicle('Lexus','Coupe','LC 500','$92,000','color','<img src="images/LCCoupe.jpg" class="activeDisplay">','luxuryclass.html#luxCoupe');
+	var vehicle2 = new Vehicle('Lexus','SUV','RX350L','$47,670','black','<img src="images/RXSUVfront.jpg" class="activeDisplay">','luxuryclass.html#luxSuv');
+	var vehicle3 = new Vehicle('Lexus','Coupe','LC 500','$92,000','white','<img src="images/LCCoupe.jpg" class="activeDisplay">','luxuryclass.html#luxCoupe');
 	var vehicle4 = new Vehicle('Lexus','Coupe','LC 500','$92,000','color','<img src="images/RXSUVfront.jpg" class="activeDisplay">','luxuryclass.html#luxCoupe');
 	var vehicle5 = new Vehicle('Lexus','Sedan','IS 300','$38,210','color','<img src="images/RXSUVfront.jpg" class="activeDisplay">','luxuryclass.html#luxCoupe');
 	var vehicle6 = new Vehicle('Lexus','SUV','NXh Sport',	'$38,210','color','<img src="RXSUVfront.jpg" class="activeDisplay">','luxuryclass.html#luxCoupe');
@@ -33,17 +33,16 @@ function Vehicle (make, format, model, price, color, pic, info){
 	
 	var tryCars =[vehicle1, vehicle2, vehicle3,vehicle4,vehicle5,vehicle5,vehicle7,vehicle8,vehicle9,vehicle10,vehicle11,vehicle12,vehicle13,vehicle14,vehicle15]
 
-/*trying with differnt format
-var tryCars = [
-{'make': 'Lexus', 'format':'Sedan', 'model':'ES 350','price':'$38,950','color':'grey','pic':'<img src="images/ESSEDAN3.jpg" class="activeDisplay">','info':'luxuryclass.html#luxSedan'},
-{'make': 'Lexus', 'format':'SUV', 'model':'ES 350','price':'$38,950','color':'grey','pic':'<img src="images/ESSEDAN3.jpg" class="activeDisplay">','info':'luxuryclass.html#luxSedan'},
-{'make': 'Toyota', 'format':'Truck', 'model':'ES 350','price':'$38,950','color':'red','pic':'<img src="images/ESSEDAN3.jpg" class="activeDisplay">','info':'luxuryclass.html#luxSedan'},
-{'make': 'Toyota', 'format':'Sedan', 'model':'ES 350','price':'$38,950','color':'grey','pic':'<img src="images/ESSEDAN3.jpg" class="activeDisplay">','info':'luxuryclass.html#luxSedan'},
-]
-*/
 
-/*function to display user specified vehicles on submit*/	
 
+
+	var cars = [];
+	var displayCar;
+	var fillUp;
+	
+	
+	/*function to display user specified vehicles on submit*/	
+	
 function userVehicle(){
 /*clears if submit button is hit more than once w/o new input*/
 		document.getElementById("displayCar").innerHTML = "<p></p>";
@@ -53,66 +52,38 @@ function userVehicle(){
 		var userFormat = document.querySelector("#select-native-6").value;
 		var userColor = document.querySelector("#select-native-7").value;
 		
-		console.log(userMake + userFormat + userColor);
+		console.log(userMake + ' ' + userFormat + ' ' + userColor);
 				
 /*loop through inventory vehicle objects to match user specs*/
 
-		
-/* 9/22 THIS IS WHERE I LEFT OFF, from stackoverflow:
-function search(nameKey, myArray){
-    for (var i=0; i < myArray.length; i++) {
-        if (myArray[i].name === nameKey) {
-            return myArray[i];
-        }
-    }
-}
 
-var array = [
-    { name:"string 1", value:"this", other: "that" },
-    { name:"string 2", value:"this", other: "that" }
-];
+/*WORKS TO DISPLAY ALL BUT ONLY FOR COLOR Goal Task: to produce user vehicles list array */
 
-var resultObject = search("string 1", array);
-*/
-
-
-/* Stack overflow this works to display all but only for color
-function search(nameKey, myArray){
+function search(nameColor, nameMake, nameFormat, myArray){
 	for (var i=0; i < myArray.length; i++) {
-        if (myArray[i].color === userColor) {
-            console.log(myArray[i]);		
-        }
+        if (myArray[i].color === nameColor && myArray[i].make === nameMake && myArray[i].format === nameFormat) {
+            console.log(myArray[i]);
+			var fillUp = myArray[i];
+			cars.push(fillUp);
+        } 
+
     }
 }
-		var userDisplay = search(userColor, tryCars);
-		console.log(userDisplay);
-*/
+		search(userColor, userMake, userFormat, tryCars);
 
-function search(nameKey, myArray){
-	for (var i=0; i < myArray.length; i++) {
-        if (myArray[i].color === userColor) {
-            console.log(myArray[i]);		
-        }
-    }
+		
+	
+/*display vehicles from user spec inputs*/	
+
+		
+	for (var i = 0; i < 3; i++){
+
+		document.getElementById("displayCar").innerHTML += cars[i].display() +"<br /><br /><br />";
+
 }
-		var userDisplay = search(userColor, tryCars);
-//		console.log(userDisplay);
-		
-/*	works only for color, not make or format	
-var foo1 = tryCars.filter(car => car.make == userMake);
-const result1 = {foo1};
-console.log(result1);
-*/
-
-/*produce user vehicles list array*/
-			var cars =[];
-
-/*code to display vehicles from user spec inputs*/			
-			cars = [vehicle1,vehicle2,vehicle3];
-		
-			for (var i = 0; i < 3; i++){
-				document.getElementById("displayCar").innerHTML += cars[i].display() +"<br /><br /><br />";
-}}
-
+}
 
 /*code for reset button logic*/
+function clearUser(){
+		document.getElementById("displayCar").innerHTML = "<p></p>";
+}

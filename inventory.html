@@ -43,24 +43,7 @@
 <!--end of jQ navbar -->
 	</div>   
 </div><!-- end of jQ header -->
-<!-- old HTML header 
-<header id="everyPage">
-	<div id="logoDiv">
-		<img id="CarDealerLogo" src="DaceMurphyAutoLogo.png" alt="Murphy Auto Toyota Lexus Logo.">
-	</div>
-	
-    <nav class="horizontal">
-        <ul>
-        <li><a href="newCarouselIndex.html">Home</a></li>
-        <li><a href="#">Sedan</a></li>
-        <li><a href="#">SUV</a></li>
-        <li><a href="#">Truck</a></li>
-		<li><a href="luxuryclass.html">Luxury</a></li>
-		<li><a href="inventory.html">Inventory</a></li>
-         </ul>
-      </nav>
-</header>
--->
+
 	<div id="finderInfo">
 		<h1>Try Murphy Auto's Inventory Finder</h1>	
 		<a href="#allInv" data-ajax="false">No thanks, just take me to the entire inventory table.</a>
@@ -69,55 +52,50 @@
 <br />
 <br />
 <div id="finderSelector">
-<form>
-<fieldset data-role="controlgroup">
-    <legend><h2>Search Current Inventory:</h2></legend>
-    <label for="select-native-5">Manufacturer</label>
-    <select name="select-native-5" id="select-native-5">
-        <option value="Missing manufacturer">--MANUFACTURER--</option>
-        <option value="toyota">Toyota</option>
-        <option value="lexus">Lexus</option>
+	<form>
+	<fieldset data-role="controlgroup">
+	    <legend><h2>Search Current Inventory:</h2></legend>
+	    <label for="select-native-5">Manufacturer</label>
+	    <select name="select-native-5" id="select-native-5">
+	        <option value="Missing manufacturer">--MANUFACTURER--</option>
+	        <option value="Toyota">Toyota</option>
+	        <option value="Lexus">Lexus</option>
 
-    </select>
-    <label for="select-native-6">Vehicle Class</label>
-    <select name="select-native-6" id="select-native-6">
-        <option value="Missing car class">--VEHICLE CLASS--</option>
-        <option value="sedan">Sedan</option>
-        <option value="suv">SUV</option>
-        <option value="truck">Truck</option>
-		<option value="lux">Luxury</option>
-    </select>
-    <label for="select-native-7">Color</label>
-    <select name="select-native-7" id="select-native-7">
-        <option value="Missing color">--COLOR--</option>
-        <option value="white">White</option>
-        <option value="black">Black</option>
-        <option value="blue">Blue</option>
-        <option value="red">Red</option>
-		<option value="grey">Grey</option>
-    </select>
-</fieldset>
-
-<br />
-<br />		
-<!--Button to find user selected specs and display the results-->
-    <button type="button" value="Find My Car" style="width: 25%; min-width: 200px;" onclick="userVehicle()">Find My Car</button>
-
-</form>
+	    </select>
+	    <label for="select-native-6">Vehicle Class</label>
+	    <select name="select-native-6" id="select-native-6">
+	        <option value="Missing car class">--VEHICLE CLASS--</option>
+	        <option value="Sedan">Sedan</option>
+	        <option value="SUV">SUV</option>
+	        <option value="Truck">Truck</option>
+			<option value="Coupe">Coupe</option>
+	    </select>
+	    <label for="select-native-7">Color</label>
+	    <select name="select-native-7" id="select-native-7">
+	        <option value="Missing color">--COLOR--</option>
+	        <option value="white">White</option>
+	        <option value="black">Black</option>
+	        <option value="blue">Blue</option>
+	        <option value="red">Red</option>
+			<option value="grey">Grey</option>
+	    </select>
+	</fieldset>
+	<br />
+	<br />		
+	<!--Button to find user selected specs and display the results-->
+		<button type="button" value="Find My Car" style="width: 25%; min-width: 200px;" onclick="userVehicle()">Find My Car</button>
+	</form>
 </div>
 <br />
 <br />
 <br />
-
-
 <!--The following area will display the inventory-->
 	<div id="inventoryDisplay">
 	<h2>Our Current Inventory Meeting Your Specifications:</h2>
 		<div id="inv1">
 		<p id="displayCar"></p>
-	
-	<br />
-	<button class="ui-btn ui-btn-inline" value="resetMe">Reset</button>
+<br />
+	<button type="button"  onclick="clearUser()" value="clearMe" style="width: 15%; min-width: 200px;">Reset</button>
 		</div>
 
 	</div>
@@ -126,12 +104,9 @@
 <br />
 <br />
 <br />
-
 <br />
 <br />
 <br />
-
-
   <div data-role="header" id="allInv">
     <h1>Murphy Auto</h1>
 	<h1>Current Inventory</h1>
@@ -161,7 +136,6 @@
 		<td>21/30</td>	
 		<td>3,649 lb</td>	
 	</tr>
-
 	<tr>
 		<th>Lexus</th>	
 		<td>SUV</td> 	
@@ -305,7 +279,6 @@
 	</tbody>	
 	</table>
   </div>
-
 <br />
 <br />
 <br />
@@ -324,7 +297,6 @@
 		<br />
 		<h3>Hours: <br />9am - 9pm Monday - Saturday <br /> 9 am - 6pm on Sundays</h3>
 	</div>
-
 </footer>
 </body>
 </html>
